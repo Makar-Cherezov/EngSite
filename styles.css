@@ -26,14 +26,13 @@ h1, h2 {
 
 h1 {
     color: var(--text-color); /* Белый цвет в обычном состоянии */
-    font-size: 4rem; /* Увеличиваем размер шрифта в два раза */
+    font-size: 4rem;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); /* Градиентный фон */
     background-clip: text; /* Обрезаем фон по тексту */
     -webkit-background-clip: text; /* Для поддержки в WebKit-браузерах */
-    /*-webkit-text-fill-color: transparent; /* Делаем текст прозрачным для градиента */
 }
-
 .text-section h1:hover {
+    cursor: pointer;
     color: transparent; /* Делаем текст прозрачным при наведении */
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); /* Градиентный фон при наведении */
     -webkit-background-clip: text; /* Обрезаем фон по тексту */
@@ -102,9 +101,9 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
-    justify-items: center; /* Центрируем элементы по горизонтали внутри ячеек */
-    max-width: 1200px; /* Устанавливаем максимальную ширину для сетки */
-    width: 100%; /* Занимаем всю доступную ширину */
+    justify-items: center; 
+    max-width: 1200px; 
+    width: 100%; 
 }
 
 .service-item {
