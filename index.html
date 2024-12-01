@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ-эксперт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <div class="text-section">
+                <h1 id="faq-expert">FAQ-эксперт</h1>
+                <p>Ваш ИИ-ассистент с самоорганизующейся базой знаний для бизнеса.</p>
+            </div>
+            <div class="image-section">
+                <img src="https://images.unsplash.com/photo-1617791160536-598cf32026fb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Футуристичное изображение" />
+            </div>
+        </div>
+    </header>
+
+    <section class="services" id="services">
+        <h2>Наши Услуги</h2>
+        <div class="service-grid">
+            <div class="service-item" style="background-color: #c6396b;" onclick="showDescription('Консультации по ИИ', 'Мы предоставляем профессиональные консультации по внедрению ИИ в ваш бизнес.')">
+                <p>Консультации по ИИ</p>
+                <img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Консультации по ИИ" />
+            </div>
+            <div class="service-item" style="background-color: #009688;" onclick="showDescription('Интеграция с бизнес-процессами', 'Интегрируем ИИ в ваши бизнес-процессы для повышения эффективности.')">
+                <p>Интеграция с бизнес-процессами</p>
+                <img src="https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Интеграция с бизнес-процессами" />
+            </div>
+            <div class="service-item" style="background-color: #ff8c00;" onclick="showDescription('Обучение и поддержка', 'Обучаем вашу команду и предоставляем поддержку на всех этапах.')">
+                <p>Обучение и поддержка</p>
+                <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Обучение и поддержка" />
+            </div>
+        </div>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h3 id="popup-title"></h3>
+                <p id="popup-description"></p>
+            </div>
+        </div>
+
+
+        <section class="partners">
+            <h2>Наши партнёры</h2>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="https://freelogopng.com/images/all_img/1681142503openai-icon-png.png" alt="Логотип компании 1" />
+                </div>
+                <div class="partner-item">
+                    <img src="https://freelogopng.com/images/all_img/1656696222microsoft-logo-white.png" alt="Логотип компании 2" />
+                </div>
+                <div class="partner-item">
+                    <img src="https://freelogopng.com/images/all_img/1685901381apple-logo-png-white.png" alt="Логотип компании 3" />
+                </div>
+                <div class="partner-item">
+                    <img src="https://freelogopng.com/images/all_img/1657955332google-logo-white.png" alt="Логотип компании 4" />
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    
+    
+
+    <script>
+        function showDescription(title, description) {
+            document.getElementById('popup-title').innerText = title;
+            document.getElementById('popup-description').innerText = description;
+            document.getElementById('popup').style.display = 'flex'; // Показываем всплывающую плашку
+        }
+    
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none'; // Скрываем всплывающую плашку
+        }
+    </script>
+    
+
+    <section class="contact-form">
+        <h2>Оставьте заявку</h2>
+        <form>
+            <input type="text" id="name" name="name" required placeholder="ФИО">
+
+            <input type="email" id="email" name="email" required placeholder="Почта">
+
+            <textarea id="company" name="company" required placeholder="Описание компании"></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 FAQ-эксперт. Все права защищены.</p>
+    </footer>
+
+    <script>
+        document.getElementById('faq-expert').onclick = function() {
+            document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>

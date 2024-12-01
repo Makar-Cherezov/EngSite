@@ -1,0 +1,256 @@
+:root {
+    --primary-color: #00ffcc;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --accent-color: #ff4081;
+    --transition-speed: 0.3s;
+    --gradient-start: #7078dd; /* Начальный цвет градиента */
+    --gradient-end: #c8a2b9; /* Конечный цвет градиента */
+    --orange: #ff8c00;
+}
+
+html {
+    scroll-behavior: smooth; /* Включаем плавный скролл для всего документа */ 
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    color: var(--text-color); /* Белый цвет в обычном состоянии */
+    font-size: 4rem; /* Увеличиваем размер шрифта в два раза */
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); /* Градиентный фон */
+    background-clip: text; /* Обрезаем фон по тексту */
+    -webkit-background-clip: text; /* Для поддержки в WebKit-браузерах */
+    /*-webkit-text-fill-color: transparent; /* Делаем текст прозрачным для градиента */
+}
+
+.text-section h1:hover {
+    color: transparent; /* Делаем текст прозрачным при наведении */
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); /* Градиентный фон при наведении */
+    -webkit-background-clip: text; /* Обрезаем фон по тексту */
+    -webkit-text-fill-color: transparent; /* Делаем текст прозрачным для градиента */
+}
+
+
+.text-section p {
+    font-size: 1.5rem; /* Устанавливаем размер шрифта на 1.5rem */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+
+
+.hero {
+    display: flex;
+    height: 100vh;
+}
+
+.hero-content {
+    display: flex;
+    width: 100%;
+}
+
+.text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.services {
+    padding: 50px 20px;
+    display: flex; /* Используем flexbox для центрирования */
+    flex-direction: column; /* Устанавливаем направление на колонку */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    min-height: 100vh; /* Устанавливаем минимальную высоту секции */
+    background: linear-gradient(90deg, var(--gradient-start),var(--gradient-end)); /* Градиентный фон */
+    color: var(--text-color); /* Убедитесь, что цвет текста соответствует вашей цветовой схеме */
+}
+
+h2 {
+    font-size: 1.75rem; /* Устанавливаем размер шрифта на 1.75rem */
+    margin-bottom: 30px; /* Отступ снизу для заголовка */
+    color: var(--text-color); /* Убедитесь, что цвет текста соответствует вашей цветовой схеме */
+}
+
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center; /* Центрируем элементы по горизонтали внутри ячеек */
+    max-width: 1200px; /* Устанавливаем максимальную ширину для сетки */
+    width: 100%; /* Занимаем всю доступную ширину */
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем содержимое внутри плашки */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform var(--transition-speed);
+    width: 320px; /* Фиксированная ширина для равномерного расстояния */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px; /* Отступ между текстом и изображением */
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.popup {
+    display: none; /* Скрываем всплывающую плашку по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для аморфного стекла */
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    width: 300px;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ffffff;
+}
+
+.partners {
+    padding: 50px 20px;
+    background-color: transparent; /* Цвет фона для секции партнёров */
+    text-align: center; /* Центрируем текст */
+}
+
+.partners-grid {
+    display: flex;
+    justify-content: space-between; /* Распределяем логотипы по всей ширине */
+    flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
+    gap: 20px; /* Отступы между логотипами */
+}
+
+.partner-item {
+    flex: 1; /* Каждый логотип занимает равное пространство */
+    min-width: 150px; /* Минимальная ширина для логотипов */
+    max-width: 200px; /* Максимальная ширина для логотипов */
+    display: flex; /* Используем flexbox для центрирования изображений */
+    justify-content: center; /* Центрируем изображение по горизонтали */
+    
+}
+
+.partner-item img {
+    
+    width: 100%; /* Логотипы занимают всю ширину родительского элемента */
+    height: 100px; /* Устанавливаем фиксированную высоту для логотипов */
+    object-fit: contain; /* Сохраняем пропорции изображения, не обрезая его */
+    border-radius: 8px; /* Закругляем углы логотипов */
+    transition: transform var(--transition-speed);
+}
+
+.partner-item img:hover {
+    transform: scale(1.05); /* Увеличиваем логотип при наведении */
+}
+
+
+
+
+.contact-form {
+    height: 100vh; /* Занимаем всю высоту экрана */
+    display: flex; /* Используем flexbox для центрирования содержимого */
+    flex-direction: column;
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    background-color: #1e1e1e; /* Цвет фона для секции формы */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: var(--text-color);
+    min-width: 50vw;
+    max-width: 80vw;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 4px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+
+}
+
+button:hover {
+    background-color: #ff8c00b1; /* Темнее при наведении */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Уменьшаем размер заголовка на мобильных устройствах */
+    }
+
+    .service-grid {
+        flex-direction: column; /* Изменяем направление на колонку для мобильных */
+        align-items: center; /* Центрируем элементы */
+    }
+
+    .service-item {
+        width: 90%; /* Увеличиваем ширину плашек на мобильных */
+    }
+}
