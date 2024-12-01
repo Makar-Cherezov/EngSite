@@ -16,6 +16,8 @@ html {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    font-size: 18px; /* Устанавливаем размер шрифта (кегль) */
+    line-height: 1.5; /* Устанавливаем высоту строки для лучшей читаемости */
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -27,9 +29,6 @@ h1, h2 {
 h1 {
     color: var(--text-color); /* Белый цвет в обычном состоянии */
     font-size: 4rem;
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); /* Градиентный фон */
-    background-clip: text; /* Обрезаем фон по тексту */
-    -webkit-background-clip: text; /* Для поддержки в WebKit-браузерах */
 }
 .text-section h1:hover {
     cursor: pointer;
