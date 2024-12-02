@@ -4,20 +4,20 @@
     --text-color: #ffffff;
     --accent-color: #ff4081;
     --transition-speed: 0.3s;
-    --gradient-start: #7078dd; /* Начальный цвет градиента */
-    --gradient-end: #c8a2b9; /* Конечный цвет градиента */
+    --gradient-start: #7078dd;
+    --gradient-end: #c8a2b9; 
     --orange: #ff8c00;
 }
 
 html {
-    scroll-behavior: smooth; /* Включаем плавный скролл для всего документа */ 
+    scroll-behavior: smooth; 
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    font-size: 18px; /* Устанавливаем размер шрифта (кегль) */
-    line-height: 1.5; /* Устанавливаем высоту строки для лучшей читаемости */
+    font-size: 18px; /* Setting default font size as 18px for better readability */
+    line-height: 1.5; /* Setting default line height as 1.5 for better readability */
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -27,21 +27,21 @@ h1, h2 {
 }
 
 h1 {
-    color: var(--text-color); /* Белый цвет в обычном состоянии */
+    color: var(--text-color); /* White color text in default state */
     font-size: 4rem;
 }
 .text-section h1:hover {
     cursor: pointer;
-    color: transparent; /* Делаем текст прозрачным при наведении */
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); /* Градиентный фон при наведении */
-    -webkit-background-clip: text; /* Обрезаем фон по тексту */
-    -webkit-text-fill-color: transparent; /* Делаем текст прозрачным для градиента */
+    color: transparent; /* Make text transparent on hover */
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); /* Add gradient background for the text */
+    -webkit-background-clip: text; /* Cut the background behind the text */
+    -webkit-text-fill-color: transparent; /* Insure the text is transparent in webkit browsers */
 }
 
 
 .text-section p {
-    font-size: 1.5rem; /* Устанавливаем размер шрифта на 1.5rem */
-    text-align: center; /* Выравниваем текст по центру */
+    font-size: 1.5rem;
+    text-align: center; 
 }
 
 
@@ -81,18 +81,18 @@ h1 {
 
 .services {
     padding: 50px 20px;
-    display: flex; /* Используем flexbox для центрирования */
-    flex-direction: column; /* Устанавливаем направление на колонку */
-    align-items: center; /* Центрируем содержимое по горизонтали */
-    min-height: 100vh; /* Устанавливаем минимальную высоту секции */
-    background: linear-gradient(90deg, var(--gradient-start),var(--gradient-end)); /* Градиентный фон */
-    color: var(--text-color); /* Убедитесь, что цвет текста соответствует вашей цветовой схеме */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh; 
+    background: linear-gradient(90deg, var(--gradient-start),var(--gradient-end)); 
+    color: var(--text-color); 
 }
 
 h2 {
-    font-size: 1.75rem; /* Устанавливаем размер шрифта на 1.75rem */
-    margin-bottom: 30px; /* Отступ снизу для заголовка */
-    color: var(--text-color); /* Убедитесь, что цвет текста соответствует вашей цветовой схеме */
+    font-size: 1.75rem; 
+    margin-bottom: 30px; 
+    color: var(--text-color);
 }
 
 
@@ -108,20 +108,20 @@ h2 {
 .service-item {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрируем содержимое внутри плашки */
+    align-items: center; 
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     transition: transform var(--transition-speed);
-    width: 320px; /* Фиксированная ширина для равномерного расстояния */
-    cursor: pointer; /* Указатель при наведении */
+    width: 320px; 
+    cursor: pointer; /* Turn cursor into a pointer for better accessibility */
 }
 
 .service-item img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-top: 10px; /* Отступ между текстом и изображением */
+    margin-top: 10px; 
 }
 
 .service-item:hover {
@@ -129,20 +129,20 @@ h2 {
 }
 
 .popup {
-    display: none; /* Скрываем всплывающую плашку по умолчанию */
+    display: none; /* Hidden on default */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    background: rgba(0, 0, 0, 0.7); 
     justify-content: center;
     align-items: center;
 }
 
 .popup-content {
-    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для аморфного стекла */
-    backdrop-filter: blur(10px); /* Эффект размытия фона */
+    background: rgba(255, 255, 255, 0.1); /* Half-transparent background for amorph glass */
+    backdrop-filter: blur(10px); /* Blur background */
     border-radius: 15px;
     padding: 20px;
     text-align: center;
@@ -161,49 +161,49 @@ h2 {
 
 .partners {
     padding: 50px 20px;
-    background-color: transparent; /* Цвет фона для секции партнёров */
-    text-align: center; /* Центрируем текст */
+    background-color: transparent; 
+    text-align: center;
 }
 
 .partners-grid {
     display: flex;
-    justify-content: space-between; /* Распределяем логотипы по всей ширине */
-    flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
-    gap: 20px; /* Отступы между логотипами */
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 20px; 
 }
 
 .partner-item {
-    flex: 1; /* Каждый логотип занимает равное пространство */
-    min-width: 150px; /* Минимальная ширина для логотипов */
-    max-width: 200px; /* Максимальная ширина для логотипов */
-    display: flex; /* Используем flexbox для центрирования изображений */
-    justify-content: center; /* Центрируем изображение по горизонтали */
+    flex: 1; 
+    min-width: 150px; 
+    max-width: 200px; 
+    display: flex; 
+    justify-content: center; 
     
 }
 
 .partner-item img {
     
-    width: 100%; /* Логотипы занимают всю ширину родительского элемента */
-    height: 100px; /* Устанавливаем фиксированную высоту для логотипов */
-    object-fit: contain; /* Сохраняем пропорции изображения, не обрезая его */
-    border-radius: 8px; /* Закругляем углы логотипов */
+    width: 100%; 
+    height: 100px; 
+    object-fit: contain; 
+    border-radius: 8px; 
     transition: transform var(--transition-speed);
 }
 
 .partner-item img:hover {
-    transform: scale(1.05); /* Увеличиваем логотип при наведении */
+    transform: scale(1.05); 
 }
 
 
 
 
 .contact-form {
-    height: 100vh; /* Занимаем всю высоту экрана */
-    display: flex; /* Используем flexbox для центрирования содержимого */
+    height: 100vh; 
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Центрируем содержимое по вертикали */
-    align-items: center; /* Центрируем содержимое по горизонтали */
-    background-color: #1e1e1e; /* Цвет фона для секции формы */
+    justify-content: center; 
+    align-items: center; 
+    background-color: #1e1e1e; 
 }
 
 form {
@@ -235,20 +235,20 @@ button {
 }
 
 button:hover {
-    background-color: #ff8c00b1; /* Темнее при наведении */
+    background-color: #ff8c00b1; 
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem; /* Уменьшаем размер заголовка на мобильных устройствах */
+        font-size: 2.5rem; /* Make the header smaller for mobile */
     }
 
     .service-grid {
-        flex-direction: column; /* Изменяем направление на колонку для мобильных */
-        align-items: center; /* Центрируем элементы */
+        flex-direction: column; /* Change the layout for mobile */
+        align-items: center; 
     }
 
     .service-item {
-        width: 90%; /* Увеличиваем ширину плашек на мобильных */
+        width: 80%; /* Widen the service items for mobile */
     }
 }
